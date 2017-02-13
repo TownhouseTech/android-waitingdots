@@ -179,4 +179,10 @@ public class DotsTextView extends TextView {
     public void setPeriod(int period) {
         this.period = period;
     }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        stop();
+    }
 }
